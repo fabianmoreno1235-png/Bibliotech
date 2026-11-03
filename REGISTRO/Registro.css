@@ -1,0 +1,559 @@
+/* ==========================
+   CONFIGURACIÓN GENERAL
+========================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f0ff,
+            #ffffff
+        );
+
+    color: #24104f;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.contenedor {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 35px rgba(75, 20, 130, 0.15);
+
+    border-top: 10px solid #6415a8;
+}
+
+
+/* ==========================
+   ENCABEZADO
+========================== */
+
+.encabezado {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.logo {
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+
+.logo-registro {
+
+    width: 150px;
+
+    height: 150px;
+}
+
+
+.encabezado h1 {
+
+    color: #4d1590;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.encabezado p {
+
+    color: #665b7c;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================
+   FORMULARIO
+========================== */
+
+.formulario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.campo label {
+
+    font-weight: bold;
+
+    color: #351064;
+
+    font-size: 15px;
+}
+
+
+.campo input,
+.campo select {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #c9bde0;
+
+    border-radius: 9px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+
+    color: #38245c;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.campo input:focus,
+.campo select:focus {
+
+    border-color: #7422b5;
+
+    box-shadow:
+        0 0 0 3px rgba(116, 34, 181, 0.15);
+}
+
+
+/* ==========================
+   CONTRASEÑA
+========================== */
+
+.campo-password {
+
+    position: relative;
+}
+
+
+.campo-password input {
+
+    padding-right: 50px;
+}
+
+
+.mostrar-password {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 7px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* ==========================
+   OPCIONES
+========================== */
+
+.opciones {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 14px;
+}
+
+
+.opciones a {
+
+    color: #7020a9;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.recordar {
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+}
+
+
+/* ==========================
+   BOTÓN PRINCIPAL
+========================== */
+
+.btn-principal {
+
+    border: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #49108e,
+            #8127b3
+        );
+
+    color: white;
+
+    height: 52px;
+
+    border-radius: 9px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.btn-principal:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(88, 20, 140, 0.30);
+}
+
+
+/* ==========================
+   MENSAJES
+========================== */
+
+.mensaje {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.mensaje-exito {
+
+    background: #e8f9e9;
+
+    border: 1px solid #8ce19a;
+
+    color: #176c2a;
+}
+
+
+.mensaje .icono {
+
+    background: #299d45;
+
+    color: white;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+}
+
+
+.mensaje button {
+
+    margin-left: auto;
+
+    background: none;
+
+    border: none;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+.oculto {
+
+    display: none;
+}
+
+
+/* ==========================
+   INFORMACIÓN
+========================== */
+
+.informacion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    background: #f4eaff;
+
+    border: 1px solid #d9baf5;
+
+    border-radius: 10px;
+
+    color: #351064;
+
+    line-height: 1.4;
+}
+
+
+.info-icono {
+
+    font-size: 28px;
+
+    color: #7020a9;
+}
+
+
+/* ==========================
+   REGISTRO
+========================== */
+
+.registro {
+
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+
+.registro p {
+
+    margin-bottom: 12px;
+
+    color: #665b7c;
+}
+
+
+.btn-secundario {
+
+    border: 2px solid #7020a9;
+
+    background: white;
+
+    color: #7020a9;
+
+    padding: 12px 30px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ==========================
+   POLÍTICA
+========================== */
+
+.politica {
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    color: #40365a;
+
+    font-size: 14px;
+}
+
+
+/* ==========================
+   BOTONES REGISTRO
+========================== */
+
+.botones-formulario {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.btn-cancelar {
+
+    height: 52px;
+
+    border-radius: 9px;
+
+    border: 2px solid #7020a9;
+
+    background: white;
+
+    color: #7020a9;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ==========================
+   PIE DE PÁGINA
+========================== */
+
+footer {
+
+    margin-top: auto;
+
+    background: #35105e;
+
+    color: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+footer a {
+
+    color: white;
+
+    margin: 0 10px;
+
+    text-decoration: none;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        width: 95%;
+
+        padding: 25px 20px;
+
+        margin: 20px auto;
+    }
+
+
+    .encabezado h1 {
+
+        font-size: 24px;
+    }
+
+
+    .logo {
+
+        width: 150px;
+
+        height: 150px;
+    }
+
+
+    .opciones {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        align-items: flex-start;
+    }
+
+
+    .botones-formulario {
+
+        grid-template-columns: 1fr;
+    }
+
+}

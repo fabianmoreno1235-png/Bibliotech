@@ -1,0 +1,300 @@
+    <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Pública</title>
+
+    <link rel="stylesheet" href="interfax.css">
+</head>
+
+<body>
+
+    <!-- BOTÓN INGRESO -->
+
+ <button
+    type="button"
+    class="btn-ingreso"
+    onclick="window.location.href='../INICIO DE SESION/Sesion.html'">
+
+    Ingreso
+
+</button>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="inicio-principal">
+
+        <!-- LOGO -->
+
+        <section class="zona-logo">
+
+            <img
+                src="Imagen1.png"
+                alt="Centro Cultural Biblioteca Pública"
+                class="logo-principal">
+
+        </section>
+
+    <section class="zona-logo">
+
+    <!-- CARRUSEL DE FOTOGRAFÍAS -->
+
+<div class="carrusel-biblioteca">
+
+    <div class="contenedor-fotos">
+
+        <img
+            src="biblioteca1.jpeg"
+            alt="Biblioteca Pública"
+            class="foto-carrusel activa">
+
+        <img
+            src="biblioteca2.jpeg"
+            alt="Instalaciones de la Biblioteca"
+            class="foto-carrusel">
+
+        <img
+            src="biblioteca3.jpeg"
+            alt="Actividades de la Biblioteca"
+            class="foto-carrusel">
+
+        <img
+            src="biblioteca4.jpeg"
+            alt="Actividades culturales"
+            class="foto-carrusel">
+
+    </div>
+
+
+    <!-- FLECHA ANTERIOR -->
+
+    <button
+        type="button"
+        class="flecha-carrusel anterior"
+        onclick="cambiarFoto(-1)">
+        ‹
+    </button>
+
+
+    <!-- FLECHA SIGUIENTE -->
+
+    <button
+        type="button"
+        class="flecha-carrusel siguiente"
+        onclick="cambiarFoto(1)">
+        ›
+    </button>
+
+
+    <!-- INDICADORES -->
+
+    <div class="indicadores">
+
+        <span
+            class="indicador activo"
+            onclick="mostrarFoto(0)">
+        </span>
+
+        <span
+            class="indicador"
+            onclick="mostrarFoto(1)">
+        </span>
+
+        <span
+            class="indicador"
+            onclick="mostrarFoto(2)">
+        </span>
+
+        <span
+            class="indicador"
+            onclick="mostrarFoto(3)">
+        </span>
+
+    </div>
+
+</div>
+
+    <!-- ACTIVIDADES Y CONVOCATORIAS -->
+
+    <div class="tarjeta-actividades">
+
+        <p>
+            Conoce Nuestras Actividades 
+            
+        </p>
+
+        <button
+            type="button"
+            class="btn-actividades"
+            onclick="mostrarActividades()">
+
+            Actividades 
+
+        </button>
+
+    </div>
+
+</section>
+
+        <!-- PANEL DERECHO -->
+
+        <section class="zona-acceso">
+
+            <h1>Bienvenid@</h1>
+
+            <button
+                class="enlace-registro"
+                onclick="window.location.href='../Registro.html'">
+
+                Regístrese aquí... ↓
+
+            </button>
+
+
+            <!-- VERIFICACIÓN -->
+
+            <div class="tarjeta-acceso">
+
+                <p>
+                    Digite y verifique su Documento:
+                </p>
+
+                <div class="verificacion">
+
+                    <input
+                        type="text"
+                        id="documento"
+                        placeholder="Documento"
+                        inputmode="numeric"
+                        maxlength="10">
+
+                    <button
+                        class="btn-verificar"
+                        onclick="verificarDocumento()">
+
+                        Verificar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- POLÍTICAS -->
+
+            <div class="politicas">
+
+                <a href="#">
+                    Política de tratamiento de datos
+                </a>
+
+                <a href="#">
+                    Términos y Condiciones
+                </a>
+
+            </div>
+
+
+            <!-- FECHA -->
+
+            <div class="fecha">
+
+                <strong id="fechaActual">
+                    viernes, 18 de septiembre de 2026
+                </strong>
+
+                <strong id="horaActual">
+                    16:23:16
+                </strong>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- VENTANA DE LOGIN -->
+
+    <div id="loginModal"
+         class="login-modal">
+
+        <div class="login-contenido">
+
+            <button
+                class="cerrar-login"
+                onclick="cerrarLogin()">
+
+                ×
+
+            </button>
+
+            <img
+                src="Imagen1.png"
+                alt="Biblioteca Pública"
+                class="logo-login">
+
+            <h2>Iniciar sesión</h2>
+
+            <p>
+                Ingresa tus credenciales para acceder
+                a la biblioteca pública.
+            </p>
+
+
+            <label for="usuario">
+                Usuario o correo electrónico
+            </label>
+
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Ingresa tu usuario o correo">
+
+
+            <label for="contrasena">
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                id="contrasena"
+                placeholder="Ingresa tu contraseña">
+
+
+            <div class="opciones-login">
+
+                <label>
+                    <input type="checkbox">
+                    Recordar mi sesión
+                </label>
+
+                <a href="#">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+            </div>
+
+
+            <button
+                class="btn-login"
+                onclick="iniciarSesion()">
+
+                ➜ Iniciar sesión
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="interfax.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>

@@ -1,0 +1,643 @@
+/* =====================================
+   CATÁLOGO
+===================================== */
+
+.barra-superior {
+
+    background: white;
+
+    min-height: 85px;
+
+    padding: 12px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    box-shadow:
+        0 3px 15px rgba(70, 20, 120, 0.12);
+}
+
+
+.marca {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.marca img {
+
+    width: 65px;
+
+    height: 65px;
+
+    object-fit: contain;
+}
+
+
+.marca h1 {
+
+    color: #4d1590;
+
+    font-size: 20px;
+
+    margin: 0;
+}
+
+
+.marca span {
+
+    font-size: 12px;
+
+    color: #756889;
+}
+
+
+.barra-superior nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.barra-superior nav a {
+
+    color: #351064;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 10px;
+
+}
+
+
+.barra-superior nav a.activo {
+
+    color: #7824b0;
+
+    border-bottom: 3px solid #7824b0;
+}
+
+
+.btn-salir {
+
+    background: #4d1590;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   CONTENEDOR CATÁLOGO
+===================================== */
+
+.catalogo {
+
+    width: 90%;
+
+    max-width: 1250px;
+
+    margin: 40px auto;
+}
+
+
+.titulo-catalogo {
+
+    margin-bottom: 30px;
+}
+
+
+.etiqueta {
+
+    color: #7824b0;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+
+.titulo-catalogo h2 {
+
+    font-size: 36px;
+
+    color: #351064;
+
+    margin: 8px 0;
+}
+
+
+.titulo-catalogo p {
+
+    color: #6c6380;
+
+    font-size: 17px;
+
+    max-width: 700px;
+}
+
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+.busqueda {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 30px rgba(75, 20, 130, 0.12);
+
+    border: 1px solid #eadff5;
+
+    margin-bottom: 30px;
+}
+
+
+.campo-busqueda {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.campo-busqueda label {
+
+    font-weight: bold;
+
+    color: #351064;
+}
+
+
+.input-busqueda {
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #cbbddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    height: 52px;
+}
+
+
+.input-busqueda span {
+
+    padding-left: 15px;
+
+    font-size: 20px;
+}
+
+
+.input-busqueda input {
+
+    flex: 1;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 15px;
+
+    font-size: 16px;
+}
+
+
+.input-busqueda button {
+
+    height: 100%;
+
+    border: none;
+
+    padding: 0 30px;
+
+    background: #7020a9;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   FILTROS
+===================================== */
+
+.filtros {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+
+.filtros div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.filtros label {
+
+    font-weight: bold;
+
+    color: #351064;
+
+    font-size: 14px;
+}
+
+
+.filtros select,
+#ordenar {
+
+    height: 45px;
+
+    border: 1px solid #cbbddd;
+
+    border-radius: 8px;
+
+    padding: 0 12px;
+
+    color: #49365e;
+
+    background: white;
+}
+
+
+/* =====================================
+   BÚSQUEDAS POPULARES
+===================================== */
+
+.populares {
+
+    margin-bottom: 35px;
+}
+
+
+.populares h3 {
+
+    color: #351064;
+
+    margin-bottom: 15px;
+}
+
+
+.etiquetas {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.etiquetas button {
+
+    border: 1px solid #d8c9e8;
+
+    background: #f6f0fc;
+
+    color: #552078;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.etiquetas button:hover {
+
+    background: #e9d9f8;
+}
+
+
+/* =====================================
+   RESULTADOS
+===================================== */
+
+.resultados {
+
+    margin-bottom: 50px;
+}
+
+
+.encabezado-resultados {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.encabezado-resultados h3 {
+
+    color: #351064;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.encabezado-resultados p {
+
+    color: #756889;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   GRID RECURSOS
+===================================== */
+
+.grid-recursos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.tarjeta-recurso {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #eadff5;
+
+    box-shadow:
+        0 5px 20px rgba(70, 20, 120, 0.10);
+
+    transition: 0.2s;
+}
+
+
+.tarjeta-recurso:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(70, 20, 120, 0.18);
+}
+
+
+.portada {
+
+    height: 150px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #421080,
+            #8c38c2
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 65px;
+
+    color: white;
+}
+
+
+.informacion-recurso {
+
+    padding: 20px;
+}
+
+
+.tipo {
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    color: #7824b0;
+
+    letter-spacing: 1px;
+}
+
+
+.informacion-recurso h4 {
+
+    font-size: 20px;
+
+    color: #351064;
+
+    margin: 8px 0;
+}
+
+
+.autor {
+
+    font-weight: bold;
+
+    color: #5e4c72;
+
+    margin-bottom: 10px;
+}
+
+
+.informacion-recurso p {
+
+    color: #756889;
+
+    line-height: 1.4;
+
+    font-size: 14px;
+}
+
+
+.estado {
+
+    margin: 15px 0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.disponible {
+
+    color: #218739;
+}
+
+
+.no-disponible {
+
+    color: #c23838;
+}
+
+
+.btn-consultar {
+
+    width: 100%;
+
+    height: 42px;
+
+    border: 2px solid #7020a9;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #7020a9;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.btn-consultar:hover {
+
+    background: #7020a9;
+
+    color: white;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .barra-superior {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .barra-superior nav {
+
+        flex-wrap: wrap;
+    }
+
+
+    .grid-recursos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .catalogo {
+
+        width: 94%;
+    }
+
+
+    .filtros {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .grid-recursos {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .input-busqueda button {
+
+        padding: 0 15px;
+    }
+
+
+    .encabezado-resultados {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .barra-superior nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Catálogo de recursos bibliográficos de la Biblioteca Pública">
+
+    <title>Catálogo - Biblioteca Pública</title>
+
+    <link rel="stylesheet"
+          href="Funcionario.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         BARRA SUPERIOR
+    ========================== -->
+
+    <header class="barra-superior">
+
+        <div class="marca">
+
+            <img
+                src="Imagen1.png"
+                alt="Logo Biblioteca Pública">
+
+            <div>
+
+                <h1>Biblioteca Pública</h1>
+
+                <span>
+                    Sistema de gestión de recursos bibliográficos
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav aria-label="Navegación principal">
+
+            <a href="Funcionario.html" class="activo">
+                📚 Catálogo
+            </a>
+
+            <a href="Notificaciones.html">
+                🔔 Notificaciones
+            
+            </a>
+
+            <a href="#">
+                👤 Mi cuenta
+            </a>
+
+            <button
+                class="btn-salir"
+                onclick="irInicio()">
+
+                Cerrar sesión
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="catalogo">
+
+        <!-- TÍTULO -->
+
+        <section class="titulo-catalogo">
+
+            <div>
+
+                <span class="etiqueta">
+                    CONSULTA BIBLIOGRÁFICA
+                </span>
+
+                <h2>
+                    Explora nuestro catálogo
+                </h2>
+
+                <p>
+                    Busca libros y otros recursos disponibles en nuestra biblioteca.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             BUSCADOR
+        ========================== -->
+
+        <section class="busqueda">
+
+            <form id="formBusqueda">
+
+                <div class="campo-busqueda">
+
+                    <label for="buscar">
+                        ¿Qué deseas buscar?
+                    </label>
+
+                    <div class="input-busqueda">
+
+                        <span>🔎</span>
+
+                        <input
+                            type="search"
+                            id="buscar"
+                            placeholder="Título, autor, tema o ISBN..."
+                            aria-label="Buscar recursos bibliográficos">
+
+                        <button type="submit">
+                            Buscar
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="filtros">
+
+                    <div>
+
+                        <label for="tipoRecurso">
+                            Tipo de recurso
+                        </label>
+
+                        <select id="tipoRecurso">
+
+                            <option value="todos">
+                                Todos los recursos
+                            </option>
+
+                            <option value="libro">
+                                Libros
+                            </option>
+
+                            <option value="infantil">
+                                Material infantil
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="clasificacion">
+                            Clasificación
+                        </label>
+
+                        <select id="categoria">
+
+                            <option value="todas">
+                                Todas las clasificaciones
+                            </option>
+
+                            <option value="Album">
+                                Album
+                            </option>
+
+                            <option value="Cuento">
+                                Cuento
+                            </option>
+
+                            <option value="Poesia">
+                                Poesía
+                            </option>
+
+                            <option value="Novela">
+                                Novela
+                            </option>
+
+                            <option value="Historieta y tira comica">
+                                Historieta y Tira cómica
+                            </option>
+
+                            <option value="Leyenda y Mitologia">
+                                Leyenda y Mitología
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =========================
+             BÚSQUEDAS POPULARES
+        ========================== -->
+
+        <section class="populares">
+
+            <h3>
+                Búsquedas populares
+            </h3>
+
+            <div class="etiquetas">
+
+                <button onclick="buscarRapido('libros')">
+                    📖 Sala Bibliografica
+                </button>
+
+                <button onclick="buscarRapido('infantil')">
+                    🧒 Sala infantil
+                </button>
+
+                <button onclick="buscarRapido('trajes')">
+                    📍 Sala de trajes
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RESULTADOS
+        ========================== -->
+
+        <section class="resultados">
+
+            <div class="encabezado-resultados">
+
+                <div>
+
+                    <h3>
+                        Recursos mas populares
+                    </h3>
+
+                    <p id="contador">
+                        Mostrando 6 recursos
+                    </p>
+
+                </div>
+
+                <select id="ordenar">
+
+                    <option value="relevancia">
+                        Ordenar por relevancia
+                    </option>
+
+                    <option value="titulo">
+                        Ordenar por título
+                    </option>
+
+                    <option value="autor">
+                        Ordenar por autor
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- TARJETAS -->
+
+            <div id="listaRecursos"
+                 class="grid-recursos">
+
+
+                <!-- RECURSO 1 -->
+
+                <article class="tarjeta-recurso">
+
+                    <div class="portada">
+                        📖
+                    </div>
+
+                    <div class="informacion-recurso">
+
+                        <span class="tipo">
+                            LIBRO
+                        </span>
+
+                        <h4>
+                            Cien años de soledad
+                        </h4>
+
+                        <p class="autor">
+                            Gabriel García Márquez
+                        </p>
+
+                        <p>
+                            Novela representativa de la
+                            literatura latinoamericana.
+                        </p>
+
+                        <div class="estado disponible">
+                            ● Disponible
+                        </div>
+
+                        <button
+                            class="btn-consultar"
+                            onclick="consultarRecurso('Cien años de soledad')">
+
+                            Ver información
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RECURSO 2 -->
+
+                <article class="tarjeta-recurso">
+
+                    <div class="portada">
+                        📚
+                    </div>
+
+                    <div class="informacion-recurso">
+
+                        <span class="tipo">
+                            LIBRO
+                        </span>
+
+                        <h4>
+                            El principito
+                        </h4>
+
+                        <p class="autor">
+                            Antoine de Saint-Exupéry
+                        </p>
+
+                        <p>
+                            Literatura infantil y universal.
+                        </p>
+
+                        <div class="estado disponible">
+                            ● Disponible
+                        </div>
+
+                        <button
+                            class="btn-consultar"
+                            onclick="consultarRecurso('El principito')">
+
+                            Ver información
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RECURSO 3 -->
+
+                <article class="tarjeta-recurso">
+
+                    <div class="portada">
+                        📕
+                    </div>
+
+                    <div class="informacion-recurso">
+
+                        <span class="tipo">
+                            LIBRO
+                        </span>
+
+                        <h4>
+                            La vorágine
+                        </h4>
+
+                        <p class="autor">
+                            José Eustasio Rivera
+                        </p>
+
+                        <p>
+                            Obra clásica de la literatura colombiana.
+                        </p>
+
+                        <div class="estado no-disponible">
+                            ● No disponible
+                        </div>
+
+                        <button
+                            class="btn-consultar"
+                            onclick="consultarRecurso('La vorágine')">
+
+                            Ver información
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RECURSO 4 -->
+
+                <article class="tarjeta-recurso">
+
+                    <div class="portada">
+                        📰
+                    </div>
+
+                    <div class="informacion-recurso">
+
+                        <span class="tipo">
+                            REVISTA
+                        </span>
+
+                        <h4>
+                            Revista de Cultura
+                        </h4>
+
+                        <p class="autor">
+                            Centro Cultural
+                        </p>
+
+                        <p>
+                            Publicaciones culturales y comunitarias.
+                        </p>
+
+                        <div class="estado disponible">
+                            ● Disponible
+                        </div>
+
+                        <button
+                            class="btn-consultar"
+                            onclick="consultarRecurso('Revista de Cultura')">
+
+                            Ver información
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RECURSO 5 -->
+
+                <article class="tarjeta-recurso">
+
+                    <div class="portada">
+                        🎓
+                    </div>
+
+                    <div class="informacion-recurso">
+
+                        <span class="tipo">
+                            TESIS
+                        </span>
+
+                        <h4>
+                            Investigación y educación
+                        </h4>
+
+                        <p class="autor">
+                            Colección académica
+                        </p>
+
+                        <p>
+                            Material académico disponible
+                            para consulta.
+                        </p>
+
+                        <div class="estado disponible">
+                            ● Disponible
+                        </div>
+
+                        <button
+                            class="btn-consultar"
+                            onclick="consultarRecurso('Investigación y educación')">
+
+                            Ver información
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RECURSO 6 -->
+
+                <article class="tarjeta-recurso">
+
+                    <div class="portada">
+                        🎧
+                    </div>
+
+                    <div class="informacion-recurso">
+
+                        <span class="tipo">
+                            AUDIOLIBRO
+                        </span>
+
+                        <h4>
+                            Historias para aprender
+                        </h4>
+
+                        <p class="autor">
+                            Biblioteca Pública
+                        </p>
+
+                        <p>
+                            Colección de audiolibros
+                            para diferentes edades.
+                        </p>
+
+                        <div class="estado disponible">
+                            ● Disponible
+                        </div>
+
+                        <button
+                            class="btn-consultar"
+                            onclick="consultarRecurso('Historias para aprender')">
+
+                            Ver información
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Centro Cultural Biblioteca Pública Municipal
+            Luis Carlos Galán Sarmiento
+        </p>
+
+        <div>
+
+            <a href="#">
+                Política de tratamiento de datos
+            </a>
+
+            <a href="#">
+                Términos y condiciones
+            </a>
+
+            <a href="#">
+                Ayuda
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="Funcionario.js"></script>
+
+</body>
+
+</html>

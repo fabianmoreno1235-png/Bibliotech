@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Sistema de gestión de la Biblioteca Pública">
+
+    <title>Biblioteca Pública - Inicio de sesión</title>
+
+    <link rel="stylesheet" href="Sesion.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <img src="Imagen1.png"
+                 alt="Logo de la Biblioteca Pública"
+                 class="logo">
+
+            <h1>BIENVENIDO</h1>
+
+            <p>
+                Ingresa tus credenciales para acceder
+                a la biblioteca pública.
+            </p>
+
+        </header>
+
+
+        <!-- MENSAJE -->
+        <div id="mensajeExito"
+             class="mensaje mensaje-exito oculto">
+
+            <span class="icono">✓</span>
+
+            <div>
+                <strong>Bienvenido, acceso autorizado.</strong>
+            </div>
+
+            <button onclick="cerrarMensaje()">×</button>
+
+        </div>
+
+
+        <!-- FORMULARIO LOGIN -->
+        <form id="formLogin" class="formulario">
+
+            <div class="campo">
+
+                <label for="usuario">
+                    👤 Usuario o correo electrónico
+                </label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Ingresa tu usuario o correo"
+                    autocomplete="username"
+                >
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="contrasena">
+                    🔒 Contraseña
+                </label>
+
+                <div class="campo-password">
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Ingresa tu contraseña"
+                        autocomplete="current-password"
+                    >
+
+                    <button
+                        type="button"
+                        class="mostrar-password"
+                        onclick="mostrarContrasena()"
+                        aria-label="Mostrar contraseña">
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="opciones">
+
+                <label class="recordar">
+
+                    <input
+                        type="checkbox"
+                        id="recordar">
+
+                    <span>Recordar mi sesión</span>
+
+                </label>
+
+                <a href="#" onclick="recuperarContrasena()">
+                    ¿Olvidaste tu contraseña?
+                </a>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn-principal">
+
+                ➜ &nbsp; Iniciar sesión
+
+            </button>
+
+        </form>
+
+
+        <!-- INFORMACIÓN -->
+        <section class="informacion">
+
+            <span class="info-icono">ⓘ</span>
+
+            <p>
+                La Biblioteca Pública está al servicio de toda
+                la comunidad, promoviendo el acceso al conocimiento.
+            </p>
+
+        </section>
+
+
+        <!-- REGISTRO -->
+        <div class="crear-cuenta">
+
+    <p>¿Aún no tienes una cuenta?</p>
+
+    <button
+        type="button"
+        class="btn-registro"
+        onclick="window.location.href='../REGISTRO/Registro.html'">
+
+        Crear cuenta
+
+    </button>
+
+</div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Centro Cultural Biblioteca Pública Municipal
+            Luis Carlos Galán Sarmiento
+        </p>
+
+        <div>
+            <a href="#">Política de tratamiento de datos</a>
+            <a href="#">Términos y condiciones</a>
+        </div>
+
+    </footer>
+
+
+    <script src="Sesion.js"></script>
+
+</body>
+
+</html>

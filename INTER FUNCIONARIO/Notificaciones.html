@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Pública - Notificaciones</title>
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="Notificaciones.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <div class="logo-area">
+
+            <div class="logo">
+                📚
+            </div>
+
+            <div class="logo-text">
+                <h2>Biblioteca Pública</h2>
+                <p>Sistema de gestión de recursos bibliográficos</p>
+            </div>
+
+        </div>
+
+
+        <!-- MENÚ -->
+
+        <nav>
+
+            <a href="Funcionario.html">
+                📚 Catálogo
+            </a>
+
+            <a href="Notificaciones.html" class="activo">
+                🔔 Notificaciones
+                <span class="notificacion-badge">3</span>
+            </a>
+
+            <a href="#">
+                👤 Mi cuenta
+            </a>
+
+            <a href="#" class="cerrar">
+                Cerrar sesión
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+        <section class="titulo-seccion">
+
+            <span class="etiqueta">
+                NOTIFICACIONES
+            </span>
+
+            <h1>
+                🔔 Reservas y novedades del catálogo
+            </h1>
+
+            <p>
+                Aquí encontrarás las reservas de libros realizadas por los usuarios
+                y otras novedades importantes.
+            </p>
+
+        </section>
+
+
+        <div class="contenido">
+
+
+            <!-- =========================
+                 FILTROS
+            ========================== -->
+
+            <aside class="filtros">
+
+                <h3>🔽 Filtros</h3>
+
+
+                <div class="filtro activo">
+
+                    <span>
+                        🟣 Todas
+                    </span>
+
+                    <span class="cantidad">
+                        3
+                    </span>
+
+                </div>
+
+
+                <div class="filtro">
+
+                    <span>
+                        🟣 Nuevas reservas
+                    </span>
+
+                    <span class="cantidad">
+                        3
+                    </span>
+
+                </div>
+
+
+                <div class="filtro">
+
+                    <span>
+                        🟢 Atendidas
+                    </span>
+
+                    <span class="cantidad">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="filtro">
+
+                    <span>
+                        🔴 Canceladas
+                    </span>
+
+                    <span class="cantidad">
+                        0
+                    </span>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =========================
+                 LISTA DE NOTIFICACIONES
+            ========================== -->
+
+            <section class="lista-notificaciones">
+
+
+                <!-- RESERVA 1 -->
+
+                <article class="notificacion">
+
+                    <div class="punto"></div>
+
+
+                    <div>
+
+                        <div class="notificacion-cabecera">
+
+                            <div class="icono-libro">
+                                📖
+                            </div>
+
+                            <h3>
+                                Nueva reserva de libro
+                            </h3>
+
+                        </div>
+
+
+                        <div class="informacion">
+
+
+                            <!-- INFORMACIÓN DEL LIBRO -->
+
+                            <div class="libro">
+
+                                <div class="portada">
+                                    Cien años
+                                    <br>
+                                    de soledad
+                                </div>
+
+
+                                <div class="libro-info">
+
+                                    <strong>
+                                        Cien años de soledad
+                                    </strong>
+
+                                    <span>
+                                        ISBN: 978-958-42-1234-5
+                                    </span>
+
+                                    <span>
+                                        Categoría: Literatura
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INFORMACIÓN DEL USUARIO -->
+
+                            <div class="datos">
+
+                                <div class="dato">
+                                    👤
+                                    <strong>Usuario:</strong>
+                                    Juan Pérez
+                                </div>
+
+                                <div class="dato">
+                                    📅
+                                    <strong>Fecha de reserva:</strong>
+                                    25 de septiembre de 2026
+                                </div>
+
+                                <div class="dato">
+                                    ⏰
+                                    <strong>Recoger antes de:</strong>
+                                    27 de septiembre de 2026
+                                </div>
+
+                                <div class="dato">
+                                    📍
+                                    <strong>Ubicación:</strong>
+                                    Sala General
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCIONES -->
+
+                    <div class="acciones">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <div class="tiempo">
+                            Hace 5 minutos
+                        </div>
+
+                        <div class="botones">
+
+                            <button
+                                class="ver"
+                                onclick="verReserva(
+                                    'Cien años de soledad',
+                                    'Juan Pérez'
+                                )">
+
+                                👁 Ver reserva
+
+                            </button>
+
+
+                            <button
+                                class="atender"
+                                onclick="atenderReserva(this)">
+
+                                ✓ Marcar como atendida
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RESERVA 2 -->
+
+                <article class="notificacion">
+
+                    <div class="punto"></div>
+
+
+                    <div>
+
+                        <div class="notificacion-cabecera">
+
+                            <div class="icono-libro">
+                                📖
+                            </div>
+
+                            <h3>
+                                Nueva reserva de libro
+                            </h3>
+
+                        </div>
+
+
+                        <div class="informacion">
+
+
+                            <div class="libro">
+
+                                <div class="portada">
+                                    El
+                                    <br>
+                                    principito
+                                </div>
+
+
+                                <div class="libro-info">
+
+                                    <strong>
+                                        El principito
+                                    </strong>
+
+                                    <span>
+                                        ISBN: 978-958-42-5678-9
+                                    </span>
+
+                                    <span>
+                                        Categoría: Literatura Infantil
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="datos">
+
+                                <div class="dato">
+                                    👤
+                                    <strong>Usuario:</strong>
+                                    María González
+                                </div>
+
+                                <div class="dato">
+                                    📅
+                                    <strong>Fecha de reserva:</strong>
+                                    25 de septiembre de 2026
+                                </div>
+
+                                <div class="dato">
+                                    ⏰
+                                    <strong>Recoger antes de:</strong>
+                                    28 de septiembre de 2026
+                                </div>
+
+                                <div class="dato">
+                                    📍
+                                    <strong>Ubicación:</strong>
+                                    Sala Infantil
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="acciones">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <div class="tiempo">
+                            Hace 20 minutos
+                        </div>
+
+
+                        <div class="botones">
+
+                            <button
+                                class="ver"
+                                onclick="verReserva(
+                                    'El principito',
+                                    'María González'
+                                )">
+
+                                👁 Ver reserva
+
+                            </button>
+
+
+                            <button
+                                class="atender"
+                                onclick="atenderReserva(this)">
+
+                                ✓ Marcar como atendida
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- RESERVA 3 -->
+
+                <article class="notificacion">
+
+                    <div class="punto"></div>
+
+
+                    <div>
+
+                        <div class="notificacion-cabecera">
+
+                            <div class="icono-libro">
+                                📖
+                            </div>
+
+                            <h3>
+                                Nueva reserva de libro
+                            </h3>
+
+                        </div>
+
+
+                        <div class="informacion">
+
+
+                            <div class="libro">
+
+                                <div class="portada">
+                                    1984
+                                </div>
+
+
+                                <div class="libro-info">
+
+                                    <strong>
+                                        1984
+                                    </strong>
+
+                                    <span>
+                                        ISBN: 978-958-42-9012-7
+                                    </span>
+
+                                    <span>
+                                        Categoría: Ciencia ficción
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="datos">
+
+                                <div class="dato">
+                                    👤
+                                    <strong>Usuario:</strong>
+                                    Carlos Ramírez
+                                </div>
+
+                                <div class="dato">
+                                    📅
+                                    <strong>Fecha de reserva:</strong>
+                                    25 de septiembre de 2026
+                                </div>
+
+                                <div class="dato">
+                                    ⏰
+                                    <strong>Recoger antes de:</strong>
+                                    28 de septiembre de 2026
+                                </div>
+
+                                <div class="dato">
+                                    📍
+                                    <strong>Ubicación:</strong>
+                                    Sala General
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="acciones">
+
+                        <span class="estado">
+                            Pendiente
+                        </span>
+
+                        <div class="tiempo">
+                            Hace 45 minutos
+                        </div>
+
+
+                        <div class="botones">
+
+                            <button
+                                class="ver"
+                                onclick="verReserva(
+                                    '1984',
+                                    'Carlos Ramírez'
+                                )">
+
+                                👁 Ver reserva
+
+                            </button>
+
+
+                            <button
+                                class="atender"
+                                onclick="atenderReserva(this)">
+
+                                ✓ Marcar como atendida
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- Archivo JavaScript -->
+
+    <script src="Notirficaciones.js"></script>
+
+</body>
+
+</html>

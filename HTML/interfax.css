@@ -1,0 +1,917 @@
+/* =====================================================
+   PANTALLA PRINCIPAL
+   BIBLIOTECA PÚBLICA
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #351064;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   BOTÓN INGRESO
+   ===================================================== */
+
+.btn-ingreso {
+
+    position: fixed;
+
+    top: 15px;
+    right: 25px;
+
+    background: #7020a9;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 22px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.20);
+
+    z-index: 20;
+
+    transition: 0.3s;
+}
+
+
+.btn-ingreso:hover {
+
+    background: #4d1590;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   ===================================================== */
+
+.inicio-principal {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+
+    align-items: center;
+
+    padding: 40px 8%;
+
+}
+
+
+/* =====================================================
+   ZONA DEL LOGO
+   ===================================================== */
+
+.zona-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* LOGO GRANDE */
+
+.logo-principal {
+
+    width: 360px;
+
+    height: 360px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   ZONA DERECHA
+   ===================================================== */
+
+.zona-acceso {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: auto;
+}
+
+
+/* TITULO */
+
+.zona-acceso h1 {
+
+    margin: 0 0 35px;
+
+    color: #7020a9;
+
+    font-size: 34px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   REGISTRO
+   ===================================================== */
+
+.enlace-registro {
+
+    background: none;
+
+    border: none;
+
+    color: #9b21b6;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+
+.enlace-registro:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   TARJETAS
+   ===================================================== */
+
+.tarjeta-acceso {
+
+    width: 100%;
+
+    border: 1px solid #26716d;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    background: white;
+}
+
+
+.tarjeta-acceso p {
+
+    margin-top: 0;
+
+    margin-bottom: 18px;
+
+    color: #351064;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   VERIFICACIÓN
+   ===================================================== */
+
+.verificacion {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.verificacion input {
+
+    width: 145px;
+
+    height: 33px;
+
+    border: 1px solid #c9d0d8;
+
+    border-radius: 3px;
+
+    padding: 8px;
+
+    outline: none;
+}
+
+
+.verificacion input:focus {
+
+    border-color: #7020a9;
+
+    box-shadow:
+        0 0 0 2px rgba(112, 32, 169, 0.10);
+}
+
+
+/* BOTÓN VERIFICAR */
+
+.btn-verificar {
+
+    background: #7020a9;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 3px;
+
+    padding: 0 18px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.btn-verificar:hover {
+
+    background: #4d1590;
+}
+
+
+/* =====================================================
+   ACTIVIDADES
+   ===================================================== */
+
+.actividades {
+
+    padding: 25px;
+}
+
+
+.btn-actividades {
+
+    background: #7020a9;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 11px 20px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.btn-actividades:hover {
+
+    background: #4d1590;
+}
+
+
+/* =====================================================
+   POLÍTICAS
+   ===================================================== */
+
+.politicas {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.politicas a {
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+.politicas a:last-child {
+
+    color: #9b21b6;
+}
+
+
+.politicas a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FECHA Y HORA
+   ===================================================== */
+
+.fecha {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    color: #111;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   MODAL LOGIN
+   ===================================================== */
+
+.login-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(53, 16, 100, 0.35);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 100;
+}
+
+
+.login-modal.activo {
+
+    display: flex;
+}
+
+
+/* CONTENIDO */
+
+.login-contenido {
+
+    position: relative;
+
+    width: 420px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CERRAR */
+
+.cerrar-login {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 18px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    color: #7020a9;
+
+    cursor: pointer;
+}
+
+
+/* LOGO LOGIN */
+
+.logo-login {
+
+    display: block;
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    margin: 0 auto 15px;
+}
+
+
+.login-contenido h2 {
+
+    text-align: center;
+
+    color: #4d1590;
+
+    margin-bottom: 8px;
+}
+
+
+.login-contenido p {
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+.login-contenido label {
+
+    display: block;
+
+    color: #351064;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin: 15px 0 6px;
+}
+
+
+.login-contenido > input {
+
+    width: 100%;
+
+    height: 43px;
+
+    border: 1px solid #cdb9df;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    outline: none;
+}
+
+
+.login-contenido > input:focus {
+
+    border-color: #7020a9;
+}
+
+
+/* OPCIONES */
+
+.opciones-login {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 15px 0;
+
+    font-size: 12px;
+}
+
+
+.opciones-login label {
+
+    margin: 0;
+
+    font-weight: normal;
+}
+
+
+.opciones-login a {
+
+    color: #7020a9;
+
+    text-decoration: none;
+}
+
+
+/* BOTÓN LOGIN */
+
+.btn-login {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4d1590,
+            #8b25b9
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.btn-login:hover {
+
+    background: #351064;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .inicio-principal {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 90px;
+    }
+
+
+    .zona-logo {
+
+        margin-bottom: 30px;
+    }
+
+
+    .logo-principal {
+
+        width: 260px;
+
+        height: 260px;
+    }
+
+
+    .zona-acceso h1 {
+
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .inicio-principal {
+
+        padding: 80px 20px 30px;
+    }
+
+
+    .logo-principal {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .zona-acceso {
+
+        max-width: 350px;
+    }
+
+
+    .tarjeta-acceso {
+
+        padding: 18px;
+    }
+
+
+    .verificacion {
+
+        gap: 10px;
+    }
+
+
+    .verificacion input {
+
+        width: 130px;
+    }
+
+
+    .login-contenido {
+
+        width: calc(100% - 30px);
+
+        padding: 25px;
+    }
+}
+/* =====================================================
+   CARRUSEL DE FOTOGRAFÍAS
+   ===================================================== */
+
+.carrusel-biblioteca {
+    position: relative;
+    width: 430px;
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 3px solid #7020a9;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(77, 21, 144, 0.20);
+}
+
+
+/* CONTENEDOR DE LAS FOTOS */
+
+.contenedor-fotos {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+
+/* FOTOGRAFÍAS */
+
+.foto-carrusel {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    /* IMPORTANTE:
+       contain muestra la fotografía COMPLETA */
+    object-fit: contain;
+
+    background: #ffffff;
+
+    opacity: 0;
+
+    transition: opacity 0.7s ease;
+
+    z-index: 1;
+}
+
+
+/* FOTO QUE SE ESTÁ MOSTRANDO */
+
+.foto-carrusel.activa {
+    opacity: 1;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   FLECHAS
+   ===================================================== */
+
+.flecha-carrusel {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(77, 21, 144, 0.85);
+
+    color: white;
+
+    font-size: 30px;
+
+    line-height: 30px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+.flecha-carrusel:hover {
+    background: #351064;
+
+    transform: translateY(-50%) scale(1.1);
+}
+
+
+/* FLECHA IZQUIERDA */
+
+.flecha-carrusel.anterior {
+    left: 12px;
+}
+
+
+/* FLECHA DERECHA */
+
+.flecha-carrusel.siguiente {
+    right: 12px;
+}
+
+
+/* =====================================================
+   INDICADORES
+   ===================================================== */
+
+.indicadores {
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    z-index: 10;
+}
+
+
+.indicador {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 1px solid #7020a9;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.indicador.activo {
+    background: #7020a9;
+
+    transform: scale(1.2);
+}
+/* =====================================================
+   ZONA IZQUIERDA
+   ===================================================== */
+
+.zona-logo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+
+/* =====================================================
+   TARJETA ACTIVIDADES
+   ===================================================== */
+
+.tarjeta-actividades {
+
+    width: 430px;
+
+    min-height: 130px;
+
+    border: 1px solid #26716d;
+
+    border-radius: 14px;
+
+    background: white;
+
+    padding: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.tarjeta-actividades p {
+
+    margin: 0 0 18px;
+
+    color: #351064;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   BOTÓN ACTIVIDADES
+   ===================================================== */
+
+.btn-actividades {
+
+    background: #7020a9;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 11px 22px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.btn-actividades:hover {
+
+    background: #4d1590;
+
+    transform: translateY(-2px);
+}
